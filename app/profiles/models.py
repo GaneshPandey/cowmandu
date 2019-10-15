@@ -72,6 +72,10 @@ class CustomerProfile(models.Model):
         default=OTHER,
         max_length=6
     )
+    customer_id = models.CharField(
+        max_length=6,
+        unique=True,
+    )
 
     def __str__(self):
         return self.user.username
