@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     'users',
     'profiles.apps.ProfilesConfig',
+    'addresses',
 ]
 
 MIDDLEWARE = [
