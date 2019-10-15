@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',  # Required for GraphiQL
     'graphene_django',
+
     'users',
+    'profiles.apps.ProfilesConfig',
 ]
 
 MIDDLEWARE = [
