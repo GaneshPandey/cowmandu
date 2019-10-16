@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'users',
     'profiles.apps.ProfilesConfig',
     'addresses',
+    'billings',
 ]
 
 MIDDLEWARE = [
