@@ -33,6 +33,11 @@ class Address(models.Model):
         default=KATHMANDU,
         max_length=20,
     )
+    nearby_location = models.CharField(
+        max_length=150,
+        blank=True,
+        null=True,
+    )
     latitude = models.CharField(
         max_length=100,
         blank=True,
