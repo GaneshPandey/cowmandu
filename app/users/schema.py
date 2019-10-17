@@ -1,5 +1,6 @@
 import graphene
 from graphene_django import DjangoObjectType
+from graphql_jwt.decorators import user_passes_test
 from django.contrib.auth import get_user_model
 
 User = get_user_model()
@@ -37,6 +38,7 @@ class Query(graphene.ObjectType):
     user = graphene.Field(UserType, id=graphene.Int(required=True))
     me = graphene.Field(UserType)
 
+    @user_passes_test(lambda user: user.is_superuser)
     def resolve_users(self, info):
         return User.objects.all()
 
