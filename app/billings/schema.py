@@ -14,6 +14,3 @@ class Query(graphene.ObjectType):
 
     def resolve_billingprofiles(self, info):
         return BillingProfile.objects.all()
-
-
-schema = graphene.Schema(query=Query)

@@ -11,7 +11,7 @@ class User(AbstractUser):
         (MANAGER, 'Manager')
     )
 
-    type = models.CharField(
+    role = models.CharField(
         choices=TYPE_CHOICES,
         default=CUSTOMER,
         max_length=10
@@ -21,11 +21,11 @@ class User(AbstractUser):
 
     @property
     def is_manager(self):
-        return self.type == self.MANAGER
+        return self.role == self.MANAGER
 
     @property
     def is_customer(self):
-        return self.type == self.CUSTOMER
+        return self.role == self.CUSTOMER
 
     def __str__(self):
         return self.get_username()

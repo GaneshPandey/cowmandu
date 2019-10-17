@@ -23,6 +23,3 @@ class Query(graphene.ObjectType):
 
     def resolve_managers_profile(self, info):
         return ManagerProfile.objects.all()
-
-
-schema = graphene.Schema(query=Query)

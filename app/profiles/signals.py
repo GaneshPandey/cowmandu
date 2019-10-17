@@ -10,9 +10,9 @@ User = get_user_model()
 @receiver(post_save, sender=User)
 def create_profile(sender, instance, created, **kwargs):
     if created:
-        if instance.type=='customer':
+        if instance.role == 'customer':
             customer_profile = CustomerProfile(user=instance)
             customer_profile.save()
-        elif instance.type=='manager':
+        elif instance.role == 'manager':
             manager_profile = ManagerProfile(user=instance)
             manager_profile.save()

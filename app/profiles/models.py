@@ -74,7 +74,6 @@ class CustomerProfile(models.Model):
     )
     customer_id = models.CharField(
         max_length=6,
-        unique=True,
     )
 
     def __str__(self):
