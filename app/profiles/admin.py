@@ -6,4 +6,4 @@ admin.site.register(ManagerProfile)
 
 @admin.register(CustomerProfile)
 class CustomerProfileAdmin(admin.ModelAdmin):
-    readonly_fields = ['customer_id']
+    readonly_fields = ['id']
